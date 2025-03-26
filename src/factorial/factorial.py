@@ -9,12 +9,8 @@ import sys
 
 # Function to calculate the factorial of a number
 def factorial(num): 
-    # If the number is negative, factorial does not exist
-    if num < 0: 
-        print("Factorial of a negative number does not exist")
-        return 0
     # The factorial of 0 is 1
-    elif num == 0: 
+    if num == 0: 
         return 1
     else: 
         # Calculate the factorial of positive numbers
