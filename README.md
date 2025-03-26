@@ -1,5 +1,6 @@
 
 # IS2 Nicolás Díaz
+[Doc del progreso](https://docs.google.com/document/d/1eft8iAcYTmFP_cCqeVWFSL75vzkEwP9swH6qfmDvEcM/edit?usp=sharing)
 
 En este repositorio vamos a aprender lo básico de git.
 
