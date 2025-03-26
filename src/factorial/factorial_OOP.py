@@ -1,16 +1,8 @@
-#!/usr/bin/python
-#*-------------------------------------------------------------------------*
-#* factorial.py                                                            *
-#* Calculates the factorial of a number                                    *
-#* Dr.P.E.Colla (c) 2022                                                   *
-#* Creative commons                                                        *
-#*-------------------------------------------------------------------------*
+# factorial_OOP.py
 import sys
 
-# Define the Factorial class
 class Factorial:
     def __init__(self):
-        # Constructor that can initialize any necessary properties
         pass
 
     def calculate_factorial(self, num):
@@ -25,23 +17,19 @@ class Factorial:
 
     def run(self, min_val, max_val):
         """Calculates factorials for numbers between min_val and max_val inclusive."""
-        # Ensure that the min value is less than or equal to the max value
         if min_val > max_val:
             print("Error: min_val should be less than or equal to max_val")
             return
-        
-        # Print factorials for the range
         for num in range(min_val, max_val + 1):
             print(f"Factorial of {num}! is {self.calculate_factorial(num)}")
 
     def run_next_10(self, start_val):
         """Calculates the next 10 factorials starting from start_val."""
-        # Print factorials for the next 10 numbers starting from start_val
         for num in range(start_val, start_val + 11):
             print(f"Factorial of {num}! is {self.calculate_factorial(num)}")
 
 
-# Function to handle input and decide which method to call
+# Function to handle input when running from the command line
 def handle_input(input_value):
     try:
         if '-' in input_value:
@@ -66,16 +54,16 @@ def handle_input(input_value):
             factorial_calculator = Factorial()
             print(f"Factorial of {num}! is {factorial_calculator.calculate_factorial(num)}")
     except ValueError:
-        # If the input is not valid, show an error
         print("Please enter a valid number or range in the 'start-end' format.")
         sys.exit()
 
-# Check if the user provided an argument from the command line
-if len(sys.argv) == 1:
-    # If no argument is passed, ask the user to enter a number or a range
-    input_value = input("You must provide a number or a range (start-end): ")
-    handle_input(input_value)
-else:
-    # If the user passed an argument, use it directly
-    input_value = sys.argv[1]
-    handle_input(input_value)
+# Main execution block, allows the script to handle input directly or through command line arguments
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        # If no argument is passed, ask the user to enter a number or a range
+        input_value = input("You must provide a number or a range (start-end): ")
+        handle_input(input_value)
+    else:
+        # If the user passed an argument, use it directly
+        input_value = sys.argv[1]
+        handle_input(input_value)
