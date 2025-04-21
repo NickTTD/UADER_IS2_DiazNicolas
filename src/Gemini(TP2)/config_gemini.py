@@ -20,7 +20,7 @@ def configurar_modelo(nombre_modelo=None):
     api_key = os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise EnvironmentError(
-            "No se encontró la variable de entorno 'GOOGLE_API_KEY'."
+            "No se encontró la variable de entorno 'GOOGLE_API_KEY'. ejecuta export GOOGLE_API_KEY='TU_KEY'"
         )
     genai.configure(api_key=api_key)
     return genai.GenerativeModel(nombre_modelo)
