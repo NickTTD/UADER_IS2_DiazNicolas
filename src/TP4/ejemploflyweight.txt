@@ -1,0 +1,4 @@
+Un ejemplo de aplicación de flyweight es una simulación de fluidos con millones de partículas.
+Para ahorrar memoria, las propiedades compartidas (como densidad del fluido, viscosidad) se almacenan en flyweights.
+Cada partícula individual solo guarda su estado único como posición o velocidad.
+Así evito duplicar datos.
